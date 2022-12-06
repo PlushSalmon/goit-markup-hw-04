@@ -110,12 +110,13 @@ img {
   color: var(--color-text-action);
 }
 
-.contact-list {
+.contact-soc-list {
   display: flex;
   gap: 50px;
 }
 
 .nav-link {
+  display: flex;
   color: var(--color-text-first);
   font-weight: 500;
   line-height: 1.14;
@@ -123,10 +124,15 @@ img {
   padding-top: 32px;
   padding-bottom: 32px;
 }
-.contact-item {
-
+.contact-soc-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.contact-link {
+.contact-soc-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: var(--color-text-second);
   font-weight: 500;
   line-height: 1.14;
@@ -135,8 +141,22 @@ img {
   padding-bottom: 32px;
 }
 
-.contact-item {
-  margin: 0;
+.contact-soc-link:hover .contact-soc-icon {
+  fill: var(--color-text-action);
+}
+
+.contact-soc-text {
+  margin-left: 10px;
+}
+
+.contact-soc-icon-one {
+  width: 16px;
+  height: 12px;
+}
+
+.contact-soc-icon-two {
+  width: 10px;
+  height: 16px;
 }
 
 /* Hero */
@@ -190,9 +210,9 @@ img {
   gap: 30px;
 }
 .advant-soc-item {
-    width: calc((100% - 120px) / 4);
-    height: 120px;
-    background-color: var(--background-color-third);
+  width: calc((100% - 120px) / 4);
+  height: 120px;
+  background-color: var(--background-color-third);
 }
 .advant-soc-link {
   width: 100%;
@@ -291,6 +311,10 @@ img {
   justify-content: center;
 }
 
+.team-soc-icon {
+  fill: var(--svg-color-noactive);
+}
+
 .team-soc-link:hover {
   width: 100%;
   height: 100%;
@@ -300,7 +324,7 @@ img {
 }
 
 .team-soc-link:hover .team-soc-icon {
-fill: var(--background-color-first);
+  fill: var(--background-color-first);
 }
 
 /* Our-clients */
@@ -322,6 +346,18 @@ fill: var(--background-color-first);
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.clients-icon {
+  fill: var(--svg-color-noactive);
+}
+
+.clients-link:hover {
+  border: 1px solid var(--color-text-action);
+  border-radius: 4px;
+}
+.clients-link:hover .clients-icon {
+  fill: var(--color-text-action);
 }
 
 /* Footer */
@@ -364,8 +400,8 @@ address {
 }
 
 .container-footer-soc {
- margin-left: 70px;
- padding-top: 12px;
+  margin-left: 70px;
+  padding-top: 12px;
 }
 .footer-soc-title {
   text-transform: uppercase;
@@ -438,7 +474,8 @@ address {
 }
 
 .gallery-list-item:hover {
-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .gallery-title {
