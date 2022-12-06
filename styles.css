@@ -8,6 +8,7 @@
   --background-color-second: #2f303a;
   --background-color-third: #f5f4fa;
   --color-just-black: #000000;
+  --svg-color-noactive:#AFB1B8;
 }
 
 body {
@@ -77,7 +78,7 @@ img {
 /* Header */
 .header-container {
   display: flex;
-  border-bottom: 1px solid #ECECEC
+  border-bottom: 1px solid #ececec;
 }
 
 .header-navigation {
@@ -128,7 +129,7 @@ img {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
-    padding-top: 32px;
+  padding-top: 32px;
   padding-bottom: 32px;
 }
 
@@ -138,7 +139,11 @@ img {
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)), url(./img/studio/hero-banner.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
+
 .hero-title {
   color: var(--background-color-first);
   font-weight: 900;
@@ -218,6 +223,9 @@ img {
 
 .team-item {
   background-color: var(--background-color-first);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .our-team-section {
@@ -235,13 +243,61 @@ img {
 }
 .team-text {
   display: flex;
-  justify-content:center;
+  justify-content: center;
   color: var(--color-text-second);
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
   min-width: 130px;
-  margin-bottom: 30px;
+  margin-bottom: 16px;
+}
+
+.team-ico-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding-bottom: 30px;
+}
+
+.team-ico-item {
+  width: 44px;
+  height: 44px;
+}
+
+.team-ico-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-svg {
+  fill: var(--svg-color-noactive);
+}
+
+.team-svg:hover,
+.team-svg:focus {
+  fill: var(--background-color-first);
+  background-color: var(--color-text-action);
+  width: auto;
+  height: auto;
+  border-radius: 505;
+}
+
+/* Our-clients */
+.clients-item {
+  width: calc(100% - 150px) / 6;
+  height: 90px;
+}
+
+.clients-list {
+  display: flex;
+  gap: 30px;
+}
+
+.clients-link {
+  display: flex;
+  border: 1px solid #AFB1B8;
+border-radius: 4px;
 }
 
 /* Footer */
@@ -303,13 +359,18 @@ address {
   border: initial;
   border-radius: 4px;
   padding: 6px 25px;
-
 }
 .button-portf:hover,
 .button-portf:focus {
   color: var(--background-color-first);
   background-color: var(--color-text-action);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.gallery-list:hover, .gallery-list:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .gallary-list {
@@ -332,8 +393,8 @@ address {
 }
 
 .container-gallary {
-  border-left: 1px solid #EEEEEE;
-  border-bottom: 1px solid #EEEEEE;
-  border-right: 1px solid #EEEEEE;
+  border-left: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
   padding: 20px 24px;
 }
